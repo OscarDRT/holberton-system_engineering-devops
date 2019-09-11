@@ -14,4 +14,6 @@ Display current directory contents.
 
 Create a script that creates a directory named holberton in the /tmp/ directory.
 
-Move the file betty from /tmp/ to /tmp/holberton.
+Move the file betty from /tmp/ to /tmp/holberton
+
+Delete the file betty.
