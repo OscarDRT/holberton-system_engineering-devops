@@ -30,3 +30,5 @@
 
 14. Owner and group
 
+15. Symbolic links
+
