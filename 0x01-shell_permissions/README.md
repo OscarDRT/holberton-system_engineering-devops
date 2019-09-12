@@ -12,5 +12,6 @@
 
 5. Execute
 
-Multiple permissions
+6.Multiple permissions
 
+7. Everybody!
