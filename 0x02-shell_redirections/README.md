@@ -25,3 +25,6 @@
 11. Don't just count your directories, make your directories count
 
 12. Whats new
+
+13. Being unique is better than being perfect
+
