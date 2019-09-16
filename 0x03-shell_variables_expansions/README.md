@@ -27,3 +27,4 @@
 
 13. Floats
 
+14. Decimal to Hexadecimal
