@@ -28,3 +28,6 @@
 13. Floats
 
 14. Decimal to Hexadecimal
+
+17. Everyone is a proponent of strong encryption
+
