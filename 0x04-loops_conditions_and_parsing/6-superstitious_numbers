@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# dispaly numbers from 1 to 20 and
+# bad days in some parts of the world
+
+i=1
+j=20
+while [ $i -le $j ]
+do
+    echo "$i"
+    case $i in
+    4) echo "bad luck from China"
+    ;;
+    9) echo "bad luck from Japan"
+    ;;
+    17) echo "bad luck from Italy"
+    esac
+    ((i++))
+done
