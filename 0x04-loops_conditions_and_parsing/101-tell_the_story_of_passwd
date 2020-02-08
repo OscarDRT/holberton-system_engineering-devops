@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Tell the story of passwd
 
 FILENAME="/etc/passwd"
 
