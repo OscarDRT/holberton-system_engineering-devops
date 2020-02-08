@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Dig the data
 
-awk '//{print $1, $9}' apache-access.log | uniq -c | sort -rn
+awk '//{print $1, $9}' apache-access.log | sort -n | uniq -c | sort -nr
