@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Bash script that displays
+
+echo $$ > /var/run/holbertonscript.pid
+
+trap "rm -rf /var/run/holbertonscript.pid; exit" SIGQUIT
+trap "echo 'I hate the kill command'; rm -rf /var/run/holbertonscript.pid; exit" SIGTERM
+trap "echo 'Y U no love me?!'" SIGINT
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
