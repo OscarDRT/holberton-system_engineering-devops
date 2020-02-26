@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#hola
+nc -l 98
