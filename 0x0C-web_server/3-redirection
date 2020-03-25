@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # The redirection must be a “301 Moved Permanently”
 
-sudo apt-get update
-sudo apt-get -y install nginx
+apt-get -y update
+apt-get -y install nginx
 echo "Holberton School" >> /var/www/html/index.html
 sed -i '/listen 80 default_server;/a rewrite ^/redirect_me$ https://www.linkedin.com/ permanent;' /etc/nginx/sites-available/default
-sudo service nginx start
+service nginx start
