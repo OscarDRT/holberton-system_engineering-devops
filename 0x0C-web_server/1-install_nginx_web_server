@@ -1,0 +1,6 @@
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo su
+echo "Holberton School" >> /var/www/html/index.html
+sudo service nginx start
+systemctl status nginx
