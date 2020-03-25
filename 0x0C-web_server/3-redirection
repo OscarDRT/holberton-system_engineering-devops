@@ -4,5 +4,5 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School" >> /var/www/html/index.html
-sed -i '/listen 80 default_server;/a rewrite ^/redirect_me$ https://www.linkedin.com/;' /etc/nginx/sites-available/default
+sed -i '/20i rewrite ^/redirect_me$ https://www.linkedin.com/;\n' /etc/nginx/sites-available/default
 sudo service nginx start
