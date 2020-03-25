@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 # 404 not found page
 
-sudo apt-get update
-sudo apt-get -y install nginx
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.html
+sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.linkedin.com/ permanent;' /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" >> /usr/share/nginx/html/custom_404.html
-sudo service nginx start
+error_404 ="\\\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\troot /usr/share/nginx/html;\n\tinternal;\n\t}"
+sed -i "46i $error_404" /etc/nginx/sites-enabled/default
+service nginx start
