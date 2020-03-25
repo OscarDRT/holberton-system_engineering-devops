@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# 404 not found page
+
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Ceci n'est pas une page" >> /usr/share/nginx/html/custom_404.html
+sudo service nginx start
