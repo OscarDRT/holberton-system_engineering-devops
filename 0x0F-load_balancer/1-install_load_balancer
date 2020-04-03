@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # Load balancer for two servers
-apt-get update
+sudo apt-get update
 sudo apt-get -y install haproxy=1.6.\*
-sed -i '/sendfile on;/a frontend haproxynode\n\tbind *:80\n\tmode http\n\tdefault_backend backendnodes\n\nbackend backendnodes\n\tbalance roundrobin\n\tserver 1306-web-01 35.227.22.206:80 check\n\tserver 1306-web-02 34.235.89.220:80 check' /etc/haproxy/haproxy.cfg 
+sudo echo "frontend haproxynode" >> /etc/haproxy/haproxy.cfg
+sudo echo "\tbind *:80" >> /etc/haproxy/haproxy.cfg
+sudo echo "\tmode http" >> /etc/haproxy/haproxy.cfg
+sudo echo "\tdefault_backend backendnodes" >> /etc/haproxy/haproxy.cfg
+sudo echo "backend backendnodes" >> /etc/haproxy/haproxy.cfg
+sudo echo "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
+sudo echo "\tserver 1306-web-01 35.227.22.206:80 check" >> /etc/haproxy/haproxy.cfg
+sudo echo "\tserver 1306-web-02 34.235.89.220:80 check" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
