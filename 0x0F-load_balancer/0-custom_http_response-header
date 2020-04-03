@@ -3,9 +3,6 @@
 
 sudo apt-get update
 sudo apt-get -y install nginx
-echo -e 'Holberton School' > /var/www/html/index.html
-sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.linkedin.com/ permanent;' /etc/nginx/sites-available/default
-sudo echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-sed -i '46i error_page 404 /custom_404.html;\nlocation = /custom_404.html {\ninternal;\n}\n' /etc/nginx/sites-available/default
-sed -i '22i \tadd_header X-Served-By $HOSTNAME;\n' /etc/nginx/nginx.conf
-service nginx start
+echo "Holberton School" >> /var/www/html/index.html
+sed -i "21i \tadd_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
+sudo service nginx start
