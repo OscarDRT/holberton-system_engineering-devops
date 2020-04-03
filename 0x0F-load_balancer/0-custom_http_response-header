@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# HTTP requests
-
-sudo apt-get update
+# HTTP response contains a custom header
+sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Holberton School" >> /var/www/html/index.html
-sed -i "21i \tadd_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
-sudo service nginx start
+echo "Holberton School" | sudo tee /var/www/html/index.html
+sed -i '/sendfile on;/a add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
+service nginx start
