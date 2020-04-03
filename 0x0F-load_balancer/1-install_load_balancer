@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # Load balancer for two servers
-apt-get install software-properties-common
-add-apt-repository ppa:vbernat/haproxy-1.6
 apt-get update
-apt-get install haproxy=1.6.\*
+sudo apt-get -y install haproxy=1.6.\*
 sed -i '/sendfile on;/a 
 frontend haproxynode
 	bind *:80
