@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+# Bash script that will display information about subdomains
 
 sub1="www"
 sub2="lb-01"
