@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+sub1="www"
+sub2="lb-01"
+sub3="web-01"
+sub4="web-02"
+
+do_it(){
+    sub=$1
+    var=$(dig "$sub"."$2" | grep -A1 'ANSWER SECTION:' | cut -d ":" -f 2)
+    echo $var | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
+}
+
+if [ $# == 1 ];
+then
+    do_it $sub1 $1
+    do_it $sub2 $1
+    do_it $sub3 $1
+    do_it $sub4 $1
+else
+    if [ $# == 2 ];
+    then
+        do_it $2 $1
+    fi
+fi
