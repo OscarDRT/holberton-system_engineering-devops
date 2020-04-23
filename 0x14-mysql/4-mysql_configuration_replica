@@ -11,19 +11,15 @@
 #
 # For explanations see
 # http://dev.mysql.com/doc/mysql/en/server-system-variables.html
-
 # This will be passed to all mysql clients
 # It has been reported that passwords should be enclosed with ticks/quotes
 # escpecially if they contain "#" chars...
 # Remember to edit /etc/mysql/debian.cnf when changing the socket location.
-
 # Here is entries for some specific programs
 # The following values assume you have at least 32M ram
-
 [mysqld_safe]
 socket		= /var/run/mysqld/mysqld.sock
 nice		= 0
-
 [mysqld]
 #
 # * Basic Settings
@@ -81,8 +77,8 @@ log_error = /var/log/mysql/error.log
 # note: if you are setting up a replication slave, see README.Debian about
 #       other settings you may need to change.
 server-id		= 2
-log_bin			= /var/log/mysql/mysql-bin.log
 relay-log               = /var/log/mysql/mysql-relay-bin.log
+log_bin			= /var/log/mysql/mysql-bin.log
 expire_logs_days	= 10
 max_binlog_size   = 100M
 binlog_do_db		= tyrell_corp
