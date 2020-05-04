@@ -6,8 +6,8 @@ from sys import argv
 
 if __name__ == "__main__":
     response = requests.get(
-                            "https://jsonplaceholder.typicode.com/todos?userId={}"
-                            .format(argv[1])).json()
+                        "https://jsonplaceholder.typicode.com/todos?userId={}"
+                        .format(argv[1])).json()
 
     user_response = requests.get(
                                 "https://jsonplaceholder.typicode.com/users/{}"
@@ -27,11 +27,8 @@ if __name__ == "__main__":
     info['DONE_TASKS'] = tasks_done
     info['NUMBER_OF_TASKS'] = number_task
 
-    text = "Employee {} is done with tasks({}/{}):\n" \
-                                                .format(
-                                                        info['EMPLOYEE'],
-                                                        info['DONE_TASKS'],
-                                                        info['NUMBER_OF_TASKS']
-                                                        )
+    text = "Employee {} ".format(info['EMPLOYEE'])
+    text += "is done with tasks({}/{}):\n" \
+        .format(info['DONE_TASKS'], info['NUMBER_OF_TASKS'])
     text += text_done
     print(text, end='')
