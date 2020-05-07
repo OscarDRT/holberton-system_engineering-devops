@@ -18,8 +18,8 @@ def top_ten(subreddit):
         children = data.get('children')
         if data and children:
             for item in children:
-                name = item.get('data')
-                title = name.get('title')
+                data = item.get('data')
+                title = data.get('title')
                 print(title)
     else:
         print(None)
