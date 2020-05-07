@@ -22,4 +22,4 @@ def top_ten(subreddit):
                 title = name.get('title')
                 print(title)
     else:
-        print(None)
+        print('None')
